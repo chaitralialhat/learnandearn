@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="learnimage.png" width="150" height="100" >
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+   <!--  <div class="col-sm-2 sidenav">
+      <p><a href="https://uidai.gov.in/">Aadhar Card</a></p>
+      <p><a href="https://www.utiitsl.com">PAN Card</a></p>
+    </div> -->
+    <div class="col-sm-8 text-left" style= "height: 400px;"> 
+		<div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="earn-while-you-learn-550px.png" style="width:100%">
+  <img class="mySlides" src="earnLearn1.png" style="width:100%">
+</div>
+		
+    </div>
+    <div class="col-sm-2 sidenav">
+     
+	  <form action="http://localhost:8086/LearnAndEarnSystem/StudentLoginServlet1" method="get">
+		<div style="position:absolute; top:70px; right:10px;">      
+        <p >User name<input type="text" name="username" placeholder="username" style="width:75%;" required></p>
+		<p>Password<input type="password" name="password" placeholder="password" style="width:75%;" required></p>
+		
+		<p><input type="submit" value="Login"></p>
+		<p>New Users sign up <a href="http://localhost:8086/LearnAndEarnSystem/StudentRegistration.html"><input type="button" value="Signup"></a></p>
+		</div>       
+      </form>
+      
+      
+    </div>
+  </div>
+  
+</div>
+<div>
+ <img src="large.jpg" style="width:1400px; height: 250px;">
+</div>
+<footer class="container-fluid text-center">
+  <p align="center">Online Earn and Learn System</p>
+</footer>
+
+</body>
+ <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

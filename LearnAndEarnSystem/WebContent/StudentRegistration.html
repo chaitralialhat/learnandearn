@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<title>Registration Page</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+form {
+    border: 3px solid orange;
+}
+
+input[type=text], input[type=password],input[type=number] ,input[type=email],input[type=tel]{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+}
+
+.container {
+    padding: 16px;
+}
+</style>
+
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="learnimage.png" width="150" height="100" >
+    </div>
+    <div style="color:white; left:550px; top:20px;">
+    
+     <h3>Student Registration</h3><br>
+    </div>
+  </div>
+</nav>
+<!-- <h4>Learn and Earn System</h4><br>
+<h3>Student Registration</h3><br> -->
+<form action="http://localhost:8086/LearnAndEarnSystem/StudentRegistration" method="get">
+  <div class="container">
+    <label><b>Student Name: </b></label>
+    <br>
+    <lable><b>First Name:</b></lable>
+    <input type="text" placeholder="Student First Name" name="fname" pattern="^[a-zA-Z]*$" required>
+	<br>
+	<lable><b>Last Name:</b></lable>
+    <input type="text" placeholder="Student Last Name" name="lname" pattern="^[a-zA-Z]*$" required>
+	<br>
+	<label><b>Gender </b></label><br>
+    <select name ="gender"> <option>Female</option><option>Male</option><option>others</option></select>
+    <br>
+    <br>
+    
+    <label><b>Mobile Number</b></label>
+    <br>
+    <input type="tel" placeholder="XX XXXX XXXX" name="mobile" pattern="[0-9]{10}" required>    
+    <br>
+    <label><b>College</b></label>
+    <br>
+    <input type="text" placeholder="college" name="college">
+    <br>   
+    <label><b>Department</b></label>
+    <br>
+    <input type="text" placeholder="department" name="department">
+    <br>   
+    <label><b>Email-ID</b></label>
+    <br>
+    <input type="email" name="mailID" placeholder="user@abc.com">
+    <br>
+    <label><b>Address</b></label>
+    <br>
+    <input type="text" name="address" placeholder="address">
+    <br>
+    <label><b>City</b></label>
+    <br>
+    <input type="text" name="city" placeholder="city">
+    <br>
+    <label><b>State</b></label>
+    <br>
+    <input type="text" name="state" placeholder="state">
+    <br>
+    <label><b>Country</b></label>
+    <br>
+    <input type="text" name="country" placeholder="country">
+    <br>
+    <label><b>User-name</b></label><br>
+    <input id="userName" type="text" name="username" required>
+    <br>
+    <label><b>Role</b></label><br>
+    <input type="text" name="role" placeholder="student/admin" required>
+    <br>
+    <label><b>Password</b></label>
+    <br>
+    <input id="confirmPassword" type="password" name="password" required>
+	<br>
+    <label><b>Re-Type Password</b></label>
+    <br>
+    <input id="reconfirmPassword" type="password" name="password" onblur="checkSamePassword()" required>
+    <br>
+    <button type="submit">Register</button>
+    
+  <a href="http://localhost:8086/LearnAndEarnSystem/StudentLogin.html"><button type="button">Cancel</button></a>
+  </div>
+
+</form>
+
+</body>
+
+<script type="text/javascript">
+
+}
+
+function checkSamePassword(){
+	var firstPassword = document.getElementById("confirmPassword").value;
+	var reEnteredPassword = document.getElementById("reconfirmPassword").value;
+	if(!(firstPassword == reEnteredPassword)){
+		document.getElementById("confirmPassword").value="";
+		document.getElementById("reconfirmPassword").value="";
+		alert("Password Must be same please re confirm same password !! ");
+		
+	}
+	}
+	
+	
+</script>
+</html>
